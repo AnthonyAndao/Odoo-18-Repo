@@ -1,36 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_hotel_rooms_list" model="ir.ui.view">
-        <field name="name">hotel.rooms.list</field>
-        <field name="model">hotel.rooms</field>
-        <field name="arch" type="xml">
-            <list>
-                <field name="name"/>
-                <field name="description"/>
-            </list>
-        </field>
-    </record>
+    <data>
+        <!-- List View Definition -->
+        <record model="ir.ui.view" id="view_rooms_list">
+            <field name="name">Hotel Rooms</field>
+            <field name="model">hotel.rooms</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="roomtype_id"/>
+                </list>
+            </field>
+        </record>
 
-    <record id="view_hotel_rooms_form" model="ir.ui.view">
-        <field name="name">hotel.rooms.form</field>
-        <field name="model">hotel.rooms</field>
-        <field name="arch" type="xml">
-            <form>
-                <sheet>
+        <!-- Form View Definition -->
+        <record model="ir.ui.view" id="view_rooms_form">
+            <field name="name">Hotel Room</field>
+            <field name="model">hotel.rooms</field>
+            <field name="arch" type="xml">
+                <form>
                     <group>
                         <field name="name"/>
                         <field name="description"/>
+                        <field name="roomtype_id"/>
                     </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+                </form>
+            </field>
+        </record>
 
-    <record id="action_hotel_rooms" model="ir.actions.act_window">
-        <field name="name">Hotel Rooms</field>
-        <field name="res_model">hotel.rooms</field>
-        <field name="view_mode">list,form</field>
-    </record>
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_hotel_rooms">
+            <field name="name">Rooms</field>
+            <field name="res_model">hotel.rooms</field>
+            <field name="view_mode">list,form</field>
+        </record>
 
-    <menuitem id="menu_hotel_root" name="Hotel" sequence="10"/>
-    <menuitem id="menu_hotel_rooms" name="Rooms" parent="menu_hotel_root" action="action_hotel_rooms" sequence="10"/>
+        <!-- Menu -->
+        <menuitem name="Rooms"
+          id="hotel_menu_rooms"
+          parent="menu_hotel_masterlists"
+          action="action_hotel_rooms"
+          sequence="10"/>
+    </data>
 </odoo>
