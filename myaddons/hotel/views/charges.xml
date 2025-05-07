@@ -37,10 +37,10 @@
         </record>
 
         <!-- Menu -->
-        <menuitem name="Charges"
+        <menuitem name="Hotel Charges"
           id="hotel_menu_charges"
           parent="menu_hotel_masterlists"
           action="action_hotel_charges"
-          sequence="30"/>
+          sequence="40"/>
     </data>
 </odoo>

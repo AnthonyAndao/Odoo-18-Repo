@@ -9,7 +9,6 @@
                 <list>
                     <field name="name"/>
                     <field name="description"/>
-                    <field name="roomtype_id"/>
                 </list>
             </field>
         </record>
@@ -23,7 +22,6 @@
                     <group>
                         <field name="name"/>
                         <field name="description"/>
-                        <field name="roomtype_id"/>
                     </group>
                 </form>
             </field>
@@ -41,6 +39,6 @@
           id="hotel_menu_rooms"
           parent="menu_hotel_masterlists"
           action="action_hotel_rooms"
-          sequence="10"/>
+          sequence="20"/>
     </data>
 </odoo>

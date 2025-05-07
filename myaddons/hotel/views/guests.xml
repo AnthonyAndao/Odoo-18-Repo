@@ -7,7 +7,9 @@
             <field name="model">hotel.guests</field>
             <field name="arch" type="xml">
                 <list>
-                    <field name="name"/>
+                    <field name="lastname"/>
+                    <field name="firstname"/>
+                    <field name="middlename"/>
                     <field name="contactno"/>
                     <field name="email"/>
                     <field name="address_city"/>
@@ -57,8 +59,8 @@
         <!-- Menu -->
         <menuitem name="Guests"
           id="hotel_menu_guests"
-          parent="menu_hotel_masterlists"
+          parent="menu_hotel_guestregistration"
           action="action_hotel_guests"
-          sequence="40"/>
+          sequence="10"/>
     </data>
 </odoo>
